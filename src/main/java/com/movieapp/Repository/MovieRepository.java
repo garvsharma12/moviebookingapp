@@ -9,6 +9,7 @@ import com.movieapp.Entity.Movie;
 
 public interface MovieRepository extends JpaRepository<Movie, Long> {
     // You can define custom query methods here if needed
-    public Optional<List<Movie>> findByGenre(String genre);
-    public Optional<List<Movie>> findByLanguage(String language);
+    Optional<List<Movie>> findByGenre(String genre);
+    Optional<List<Movie>> findByLanguage(String language);
+    Optional<Movie> findByTitle(String title);
 }
